@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: darkgoldenrod;
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.container{
+    width: 95%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+nav label{
+    color: aliceblue;
+    font-size: 35px;
+    line-height: 80px;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+a:hover{
+    background-color: rgb(240, 188, 55);
+}
+
+.checkbtn{
+    color: aliceblue;
+    float: right;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+header{
+    background: url(https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/the-vegetarian-butcher/nasvhille-hot-burger/1245x600_Nashville%20style%20Chicken%20Burger.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+@media (max-width:900px) {
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 183, 0);
+        top: 80px;
+        text-align: center;
+        transition: all 0.5s;
+        right: -100%;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check:checked ~ ul{
+        right: 0;
+    }
+}
+
